@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projeto 1/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

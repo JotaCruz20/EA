@@ -1,0 +1,42 @@
+n = 4, h=3, H = 6
+offsetMaxStartingPoint: altura atual + h -1
+offsetMaxEndingPoint: falta descer < coluna atual * (tamanho peça - 1)
+
+  |0     |1     |2    |3 (coluna atual)
+0 |(1,0) |(0,0) |(0,2)|(0,2)
+1 |(0,0) |(1,0) |(0,1)| _
+2 |(0,0) |(1,0) |(1,0)| _
+3 |(0,0) |(0,0) |(0,0)| _
+4 |(0,0) |(0,0) |(0,0)| _
+(altura atual)
+
+
+  |0|1|2|3 (coluna atual)
+0 |1|0|0|0
+1 |0|1|0| _
+2 |0|1|1| _
+3 |0|0|0| _
+4 |0|0|0| _
+(altura atual)
+
+  |0|1|2|3 (coluna atual)
+0 |1|0|0|0
+1 |0|1|0|0
+2 |0|1|1|0
+3 |0|0|2|1
+4 |0|0|1|3
+
+i=0 e j=0
+
+i=1 e j=1 +1
+i=2 e j=1 +1
+
+i->altura em que estamos
+j->bloco em que estamos
+
+  |0|1|2|3 (coluna atual)
+0 |1|0|0|0
+1 |0|1|0|0
+2 |0|0|0|0
+3 |0|0|0|0
+4 |0|0|0|0
