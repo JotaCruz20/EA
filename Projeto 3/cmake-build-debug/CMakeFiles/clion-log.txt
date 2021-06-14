@@ -1,4 +1,4 @@
-C:\Users\jotot\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/c++.exe -G "CodeBlocks - Unix Makefiles" "/cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projeto 3"
+C:\Users\jotot\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/c++.exe -G "CodeBlocks - Unix Makefiles" "/cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projetos/EA/Projeto 3"
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -15,4 +15,4 @@ C:\Users\jotot\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -D
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projeto 3/cmake-build-debug
+-- Build files have been written to: /cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projetos/EA/Projeto 3/cmake-build-debug

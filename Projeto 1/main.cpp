@@ -159,7 +159,7 @@ std::tuple<bool,bool> moveRight(std::vector<std::vector<int>> &board){
                         if(board[i][row]==board[i][j]){ // se for igual somamos
                             board[i][row] = board[i][j] << 1;
 
-                            flag= true;
+                            flag = true;
                             --nEles;
                             board[i][j]=0;
                             --row;
@@ -194,29 +194,32 @@ void matrixCalculator(const std::vector<std::vector<int>>& board,int max,int mov
 
     std::vector<std::vector<int>> boardL,boardR,boardU,boardD;
 
-    if(movesDone == max or movesDone >=minimum or movesWithoutSum==5){
+    if(movesDone == max or movesDone >=minimum or movesWithoutSum==5){ // Se chegarmos ao numero maximos de move, ou os
+        // moves feitos forem >= minimo ate ao momento, ou forem feitos 5 moves sem soma entao cortar
         return;
     }
 
     else {
-        if((lLastMove!='R' or lastMove!='L' or sumlLast)){
+        if((lLastMove!='R' or lastMove!='L' or sumlLast)){ // se for feito anteriormente Direita Esquerda e nao tiver
+            //havido soma entao nao voltar a fazer para a direita
             boardR = board;
             sumlLast = sumLast;
             std::tuple moveFlags = moveRight(boardR);
             sumLast = std::get<0>(moveFlags);
             bool changes = std::get<1>(moveFlags);
 
-            if(checkDone==1){
+            if(checkDone==1){ // caso haja so 1 elemento na matriz acabar
                 checkDone = 0;
                 if(movesDone+1<minimum){
                     minimum = movesDone+1;
                 }
                 return;
             }
-            else if(changes) {
+            else if(changes) { // caso tenha havido mudanças continua, se nao segue para o proximo move
                 lLastMove = lastMove;
                 lastMove = 'R';
-                if(!sumLast) {
+                if(!sumLast) { // para saber se houve move no atual e caso nao haja somar nos moves sem soma, de maneira
+                    // a controlar o numero de moves sem soma
                     matrixCalculator(boardR, max, movesDone + 1,movesWithoutSum+1,lastMove,lLastMove,sumlLast, sumLast);
                 }
                 else{
@@ -323,9 +326,9 @@ int main() {
                 }
             }
         }
-        bool powerOfTwo = (sumTotal>0 && ((sumTotal & (sumTotal-1)) == 0));
+        bool powerOfTwo = (sumTotal>0 && ((sumTotal & (sumTotal-1)) == 0)); // primeiro corte, se não for power of two então é impossivel
         minimum = nTry+1;
-        if(nEles==0 or nEles==1){
+        if(nEles==0 or nEles==1){ // se o nº de elementos !=0 for 0 ou 1 entao a solução é 1
             std::cout << 0 << std::endl;
         }
         else if(!powerOfTwo){

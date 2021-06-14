@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projeto 2
+# Install script for directory: /cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projetos/EA/Projeto 2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projeto 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/d/One Drive/OneDrive - Universidade de Coimbra/Univerisdade/UNI-Meu/PL EA/Projetos/EA/Projeto 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

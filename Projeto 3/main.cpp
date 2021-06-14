@@ -26,7 +26,7 @@ void tarjan(int u) {
     dfs[u] = low[u] = t++;
     S.push_back(u);
     onstack[u] = true;
-    for (auto x:adj[u]) {
+    for (auto x:adj[u]) { // vai chamar tarjan para todos os arcos do nó e atualizar o low
         int i = get<0>(x);
         if (dfs[i] == -1) {
             tarjan(i);
@@ -37,7 +37,8 @@ void tarjan(int u) {
 
         }
     }
-    if (dfs[u] == low[u]) {
+    if (dfs[u] == low[u]) { // caso seja raiz de um caminho vai tirar todos os pontos da stack e adicionar num vetor
+        // com os pontos
         vector<int> temp;
         vector<vector<int>> temp2;
         int v;
@@ -45,7 +46,7 @@ void tarjan(int u) {
             v = S.back();
             S.pop_back();
             onstack[v] = false;
-            for(int l:temp){
+            for(int l:temp){ // para poder usar no kruskal é necessario que o caminho seja bidirecional
                 for(auto tp:adj[v]){
                     if(get<0>(tp)==l){
                         temp2.push_back(vector<int>{v,l,get<1>(tp)});
@@ -136,11 +137,11 @@ int main() {
             cin >> POI_A;
             cin >> POI_B;
             cin >> distance;
-            adj[POI_A - 1].push_back(make_tuple(POI_B - 1, distance));
+            adj[POI_A - 1].push_back(make_tuple(POI_B - 1, distance)); // lista de adjacencia
         }
         for (int k = 0; k < n_POI; ++k) {
             if (dfs[k] == -1) {
-                tarjan(k);
+                tarjan(k); // chamar o tarjan para cada nó nao visitado
             }
         }
         low.clear();
